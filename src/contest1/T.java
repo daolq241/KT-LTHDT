@@ -18,50 +18,52 @@ import javafx.scene.layout.Priority;
 public class T {
 
     public static void main(String[] args) {
+//        char c = '8';
+//        char d = '9';
+//        System.out.println(c+d);
+
+//=============  PriorityQueue===============
+//        PriorityQueue<Integer> q = new PriorityQueue<>();
+//        q.add(5);
+//        q.add(1);
+//        q.add(3);
+//        q.add(10);
+////        q.poll(); // Xoa bo phan tu dau queue, va sort queue
+//        System.out.println(q);
  //=============Queue=================
 //        Queue<Integer> q = new LinkedList<>();
 //        q.add(3);
 //        q.add(5);
 //        q.add(10);
-//        q.add(2);
-//        q.poll();
+//        q.add(15);
+//        System.out.println(q.peek()); // lay gt o dau 
 //        System.out.println(q);
-//=============  PriorityQueue===============
-        PriorityQueue<Integer> q = new PriorityQueue<>();
-        q.add(5);
-        q.add(1);
-        q.add(3);
-        q.add(10);
-//        q.poll(); // Xoa bo phan tu dau queue, va sort queue
-           
-        
-        System.out.println(q);
+//        q.poll(); // xoa phan tu o dau
+//        System.out.println(q);
 //================Vector=======================
-//        int a[] = new int[]{1, 2, 3, 4};
-//        Vector<Integer> v = new Vector<Integer>();
-//        v.add(9);
-//        v.add(5);
-//        v.add(2);
-//        v.add(4);
-//        System.out.println(v);
-//        Collections.sort(v);
-//        System.out.println(v);
-//
-//        v.remove(1);
-////        v.remove(0);
-//        v.add(100);
-//        System.out.println(v);
+        int a[] = new int[]{1, 2, 3, 4};
+        Vector<Integer> v = new Vector<Integer>();
+        v.add(9);
+        v.add(5);
+        v.add(2);
+        v.add(4);
+        System.out.println(v);
+        Collections.sort(v);
+        System.out.println(v);
+        v.remove(1);
+//        v.remove(0);
+        v.add(100);
+        System.out.println(v);
 //================ Stack===============
 //        Stack<Integer> st = new Stack<>();
 //        st.push(1);
 //        st.push(2);
-//
 //        st.push(3);
-//
 //        st.push(4);
 //        st.push(5);
-//        st.pop();
-//        System.out.println(st.peek());
+//        int x = st.pop();
+//        System.out.println(x);
+////        System.out.println(st.peek());
 //        for (Integer integer : st) {
 //            System.out.print(integer + " ");
 //        }

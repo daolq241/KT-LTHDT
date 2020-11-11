@@ -16,7 +16,7 @@ public class Bai19 {
         long n;
         sc.nextLine();
         while (t-- >0) {
-            n = sc.nextLong();
+            n = sc.nextLong();  
             Vector<String> cubes = new Vector<>();
             String num = String.valueOf(n);
             for(long i =1; i*i*i <= n; i++ ) {
