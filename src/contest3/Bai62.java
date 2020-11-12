@@ -6,31 +6,50 @@ import java.util.Scanner;
  *
  * @author Lê Quang Đạo
  */
+// DÃY CON LẶP LẠI DÀI NHẤT
+/*
+    Tương tự XÂU CON CHUNG DÀI NHẤT CỦA 2 XÂU
+    =>  Xâu còn chung dài nhất của 2 xâu s và s
+ */
 public class Bai62 {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n;
-       n = sc.nextInt();
-       int a[] = new int[n];
-        for (int i = 0; i < a.length; i++) {
-            a[i] = sc.nextInt();
-            
+        int t, n;
+        t = sc.nextInt();
+        while (t-- > 0) {
+            n = sc.nextInt();
+            sc.nextLine();
+            String s;
+            s = sc.nextLine();
+            System.out.println(process(s, n));
+
         }
-        System.out.println(process(a, n));
     }
-    private static int process(int[] a, int n) {
-        int ans = 0;
-        int f[] = new int[n];
-        for(int i = 0; i< n; i++) {
-            f[i] = 1;
-            for(int j = 0; j < i; j++) {
-                if(a[j] < a[i]) {
-                    f[i] = Math.max(f[i], f[j]+1);
+
+    private static int process(String s, int n) {
+        s = " " + s;
+        // Fij luu xau con chung dai nhat cua i phan tu xau a va j phan tu xau a
+        int f[][] = new int[105][105];
+
+//        for(int i = 0; i <= n; i ++) {
+//            f[i][0] = 0;
+//            f[0][i] = 0;
+//        }
+        for (int i = 0; i <= n; i++) {
+            for (int j = 0; j <= n; j++) {
+                f[i][j] = 0;
+            }
+        }
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                if (s.charAt(i) == s.charAt(j) && i != j) { // Chu y: i!=j
+                    f[i][j] = f[i - 1][j - 1] + 1;
+                } else {
+                    f[i][j] = Math.max(f[i][j - 1], f[i - 1][j]);
                 }
             }
-            ans = Math.max(ans,f[i]);
         }
-        return ans;
-    }   
-    
+        return f[n][n];
+    }
 }
