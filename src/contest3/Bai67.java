@@ -23,7 +23,7 @@ public class Bai67 {
         long F[] = new long[55]; // Fi la so cach di chuyen toi dinh i
         F[0] = 1;
         F[1] = 1;
-        F[2] = 2;
+        F[2] = 2;  
         for (int i = 3; i <= n; i++) {
             for (int j = 1; j <= 3; j++) {
 //                if (i - j >= 0) {
